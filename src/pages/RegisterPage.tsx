@@ -49,7 +49,7 @@ const RegisterPage = () => {
         }
     }
 
-    /* comentado para probar npm run build
+    
     const sendEmail = async () => {
         const mainpage = 'http://localhost:5173/app/dashboard';
 
@@ -78,7 +78,7 @@ const RegisterPage = () => {
         } catch (error) {
             console.error(error);
         }
-    }*/
+    }
 
     
 
@@ -94,9 +94,7 @@ const RegisterPage = () => {
         <button className="bg-blue-500 text-white px-4 py-2 rounded w-84 mt-4 hover:bg-blue-600 active:bg-blue-700 cursor-pointer transition duration-200" 
             type="button" onClick={() => {
                 registerHandler(user, email, password);
-                // addAccessLog('Registro', true);
-                // registerClick();
-                // sendEmail();
+                sendEmail();
             }}>Registrar</button>
     </form>
 </div>
