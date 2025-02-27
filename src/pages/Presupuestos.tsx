@@ -1,10 +1,10 @@
-import { useEffect, useState, /*useMemo*/ } from "react";
+import { useEffect, useState } from "react";
 import { obtenerPresupuestos } from "../services/PresupuestoService";
 import { PresupuestoTipo } from "../types/PresupuestoTipo";
 import { obtenerCategorias, CategoriaTipo } from "../services/CategoryService";
-import { FaEdit, FaTrash, /*FaFilter, FaPlus*/ } from "react-icons/fa"
+import { FaEdit, FaTrash } from "react-icons/fa"
 
-import AgregarPresupuestoModal, { /*Categoria*/ } from "./AgregarPresupuestoModal";
+import AgregarPresupuestoModal from "./AgregarPresupuestoModal";
 import EliminarPresupuestoModal from "./EliminarPresupuestoModal";
 import EditarPresupuestoModal from "./EditarPresupuestoModal";
 import { Table } from "react-bootstrap";
@@ -65,7 +65,7 @@ function Presupuestos() {
             category_id: ng_categoria,
         };
 
-        const user = localStorage.getItem('user');
+        const user = sessionStorage.getItem('user');
         let token = '';
         if (user) {
             const userInfo = JSON.parse(user);
