@@ -78,7 +78,7 @@ const RegisterPage = () => {
         } catch (error) {
             console.error(error);
         }
-
+    }
 
     
 
